@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đề xuất kế hoạch tập huấn NCKH mini, NH 2026-2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;--surface:#ffffff;--surface2:#f1f5f9;--ink:#0f172a;--ink2:#1e293b;--body:#1e293b;--muted:#475569;--faint:#64748b;--line:#e2e8f0;
+  --pri:#4f46e5;--pri-d:#3730a3;--pri-50:#eef2ff;--pri-100:#e0e7ff;--pri-200:#c7d2fe;--pri-ink:#312e81;
+  --ok:#059669;--ok-100:#d1fae5;--ok-200:#a7f3d0;--ok-ink:#065f46;
+  --A:#1d4ed8;--As:#eff6ff;--B:#6d28d9;--Bs:#f5f3ff;--C:#c2410c;--Cs:#fff7ed;--D:#047857;--Ds:#ecfdf5;--E:#be123c;--Es:#fff1f2;--F:#475569;--Fs:#f1f5f9;
+  --l0:#f8fafc;--l1:#ecfdf5;--l2:#d1fae5;--l3:#059669;--l3ink:#ffffff;
+  --warn:#92400e;--warn-bg:#fffbeb;--warn-line:#fde68a;
+  --sticky:rgba(255,255,255,.96);--shadow:0 1px 2px 0 rgba(15,23,42,.05);--shadow2:0 1px 3px 0 rgba(15,23,42,.1),0 1px 2px -1px rgba(15,23,42,.1);
+  --sans:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6}
+:focus-visible{outline:2px solid var(--pri);outline-offset:2px;border-radius:6px}
+button{font:inherit}
+
+.shell{padding:16px 12px}
+@media (min-width:640px){.shell{padding:24px}}
+@media (min-width:1024px){.shell{padding:24px 40px}}
+.sticky{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--sticky);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border-bottom:1px solid var(--line);box-shadow:var(--shadow);margin:-16px -12px 16px;padding:12px 12px 12px}
+@media (min-width:640px){.sticky{margin:-24px -24px 16px;padding:14px 24px 12px}}
+@media (min-width:1024px){.sticky{margin:-24px -40px 20px;padding-left:40px;padding-right:40px}}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.brand{margin:0;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--pri)}
+.top h1{margin:0;font-size:1.125rem;line-height:1.35;font-weight:800;color:var(--ink)}
+@media (min-width:640px){.top h1{font-size:1.25rem}}
+.top-r{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.count{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;font-size:.75rem;font-weight:700;border-radius:8px;border:2px solid var(--line);background:var(--surface);color:var(--muted);white-space:nowrap}
+.count.p{border-color:var(--pri-200);background:var(--pri-50);color:var(--pri-d)}
+@media (max-width:640px){.count{padding:5px 8px;font-size:.7rem}.top-r{gap:4px}}
+.progress{height:8px;background:var(--line);border-radius:999px;overflow:hidden;margin-bottom:8px}
+.progress div{height:100%;background:var(--pri);border-radius:999px;transition:width .4s ease}
+.pills{display:flex;gap:4px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.pill{flex:none;appearance:none;border:0;font-size:.75rem;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer;background:var(--ok-100);color:var(--ok-ink);transition:background-color .15s}
+.pill:hover{background:var(--ok-200)}
+.pill[aria-selected="true"]{background:var(--pri);color:#fff;box-shadow:var(--shadow2)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:16px}
+@media (min-width:640px){.card{padding:32px}}
+.foot{text-align:center;font-size:.75rem;color:var(--faint);padding-top:8px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:no-preference){.fade-in{animation:fadeIn .35s ease}@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}}
+section[role=tabpanel][hidden]{display:none}
+
+.s-head{margin-bottom:16px}
+.s-head .meta{display:block;font-size:.75rem;font-weight:600;color:var(--muted);margin-bottom:4px}
+.s-head h2{margin:0;font-size:1.25rem;line-height:1.35;font-weight:700;color:var(--pri-d)}
+.goal{background:var(--pri-50);border:1px solid var(--pri-100);border-radius:12px;padding:16px;margin:0 0 20px;font-size:.875rem;color:var(--pri-ink)}
+.goal b{color:var(--pri-d)}
+.goal p{color:var(--pri-ink);margin:0}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:0 0 12px;margin-bottom:20px;border-bottom:1px solid var(--line);scrollbar-width:thin}
+.tabs button{flex:none;appearance:none;border:2px solid var(--line);background:var(--surface);color:var(--body);font-size:.8rem;font-weight:600;padding:6px 12px;border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.tabs button:hover{border-color:var(--pri-200);color:var(--pri)}
+.tabs button[aria-selected="true"]{background:var(--pri-50);border-color:var(--pri-200);color:var(--pri-d)}
+h3{font-size:1.05rem;font-weight:700;color:var(--ink2);margin:24px 0 10px}
+.sub>h3:first-child{margin-top:0}
+h4{font-size:.95rem;font-weight:700;color:var(--ink2);margin:16px 0 6px}
+p{margin:0 0 10px;color:var(--body);font-size:.9rem}
+.note{color:var(--muted);font-size:.85rem}
+ul,ol{padding-left:1.25em;margin:0 0 10px;color:var(--body);font-size:.9rem}
+li{margin:3px 0}
+.tbl{overflow-x:auto;margin:0 0 16px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.85rem;color:var(--body)}
+th,td{padding:10px 12px;vertical-align:top;text-align:left;border:1px solid var(--line)}
+tr>:first-child{border-left:0} tr>:last-child{border-right:0}
+thead tr:first-child>*{border-top:0} tbody tr:last-child>*{border-bottom:0}
+th{background:var(--surface2);font-weight:700;color:var(--ink2)}
+td.k{font-weight:600;white-space:nowrap;color:var(--ink2)}
+.notebox{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:12px;padding:12px 16px;margin:14px 0;font-size:.875rem;color:var(--warn)}
+.toolbar{display:flex;gap:6px;margin:0 0 14px;flex-wrap:wrap;align-items:center}
+.toolbar .lab{font-size:.75rem;font-weight:600;color:var(--muted);margin-right:2px}
+.toolbar button{appearance:none;font-size:.75rem;font-weight:700;border:2px solid var(--line);background:var(--surface);color:var(--body);padding:5px 12px;border-radius:8px;cursor:pointer}
+.toolbar button:hover{border-color:var(--pri-200);color:var(--pri)}
+.toolbar button.on{background:var(--pri);border-color:var(--pri);color:#fff}
+.toolbar .gap{width:12px}
+.chip{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:0 8px;margin:0 4px 4px 0;font-size:.8rem;background:var(--surface2);color:var(--body)}
+.legend{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.legend span{font-size:.75rem;font-weight:600;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--body)}
+
+/* domain tag (like .kn) */
+.kn{display:inline-block;font-weight:700;font-size:.78em;padding:1px 7px;border-radius:6px;white-space:nowrap;color:var(--kc);background:var(--ks)}
+.kn.sup{background:transparent;box-shadow:inset 0 0 0 1.5px var(--kc)}
+[data-d="A"]{--kc:var(--A);--ks:var(--As)}[data-d="B"]{--kc:var(--B);--ks:var(--Bs)}[data-d="C"]{--kc:var(--C);--ks:var(--Cs)}
+[data-d="D"]{--kc:var(--D);--ks:var(--Ds)}[data-d="E"]{--kc:var(--E);--ks:var(--Es)}[data-d="F"]{--kc:var(--F);--ks:var(--Fs)}
+
+/* skill card */
+.skill{border:1px solid var(--line);border-left:4px solid var(--kc,var(--pri));border-radius:16px;background:var(--surface);box-shadow:var(--shadow);padding:16px 20px;margin-bottom:16px}
+.skill h3{margin:0 0 10px;color:var(--kc,var(--pri-d));font-size:1rem}
+.skill dl{display:grid;grid-template-columns:170px 1fr;gap:10px 16px;margin:0;font-size:.9rem}
+.skill dt{font-weight:600;color:var(--muted);font-size:.85rem}
+.skill dd{margin:0;color:var(--body)}
+.skill dd p{margin:0 0 4px}
+.skill dd ul{margin:2px 0 0}
+.skill dd .vi{color:var(--muted)}
+.skill dd.tgt{background:var(--ks,var(--pri-50));border-radius:8px;padding:6px 10px;margin:-6px 0}
+.linkbtn{appearance:none;background:none;border:0;padding:8px 0 0;color:var(--pri);font-weight:600;font-size:.8rem;cursor:pointer}
+@media (max-width:640px){.skill dl{grid-template-columns:1fr;gap:2px}.skill dd{margin-bottom:10px}.skill dd.tgt{margin:0 0 10px}}
+.gen{display:grid;grid-template-columns:170px 1fr;gap:10px 16px;background:var(--pri-50);border:1px solid var(--pri-100);border-radius:12px;padding:16px;margin:0 0 20px;font-size:.875rem}
+.gen dt{font-weight:700;color:var(--pri-d)}
+.gen dd{margin:0;color:var(--pri-ink)}
+@media (max-width:640px){.gen{grid-template-columns:1fr;gap:2px}.gen dd{margin-bottom:8px}}
+
+/* indicator with 4-level ladder */
+.ind{border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:var(--shadow);margin-bottom:16px;overflow:hidden}
+.ind header{padding:14px 16px;display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;border-bottom:1px solid var(--line)}
+.ind header h4{margin:0;font-size:.95rem}
+.ind header .forms{font-size:.85rem;color:var(--body);flex-basis:100%;margin:4px 0 0}
+.ind .meta{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}
+.ind .meta div{padding:10px 16px;font-size:.83rem;color:var(--body)}
+.ind .meta div+div{border-left:1px solid var(--line)}
+.ind .meta b{display:block;font-size:.75rem;color:var(--muted)}
+.ladder{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;padding:0;margin:0}
+.ladder li{margin:0;border-right:1px solid var(--line)}
+.ladder li:last-child{border-right:0}
+.ladder button{appearance:none;display:flex;flex-direction:column;justify-content:flex-start;width:100%;height:100%;text-align:left;border:0;padding:12px 14px;font-size:.85rem;color:var(--body);cursor:pointer;background:transparent}
+.ladder button b{display:block;font-size:.75rem;margin-bottom:4px;color:var(--ink2)}
+.ladder li[data-l="0"]{background:var(--l0)}.ladder li[data-l="1"]{background:var(--l1)}.ladder li[data-l="2"]{background:var(--l2)}
+.ladder li[data-l="3"]{background:var(--l3)}.ladder li[data-l="3"] button,.ladder li[data-l="3"] button b{color:var(--l3ink)}
+.ladder button[aria-pressed="true"]{box-shadow:inset 0 0 0 3px var(--pri)}
+.ladder button[aria-pressed="true"] b::after{content:"  ✓ selected";font-weight:700}
+@media (max-width:760px){.ladder{grid-template-columns:1fr}.ladder li{border-right:0;border-bottom:1px solid var(--line)}.ladder li:last-child{border-bottom:0}.ind .meta{grid-template-columns:1fr}.ind .meta div+div{border-left:0;border-top:1px solid var(--line)}}
+.summary{position:sticky;bottom:0;z-index:5;background:var(--sticky);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow2);padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));margin-top:8px;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.summary .lb{font-size:.7rem;font-weight:600;color:var(--muted)}
+.summary .dec{font-size:1.05rem;font-weight:800;color:var(--pri-d)}
+.summary .sc{display:flex;gap:4px}
+.summary .sc span{min-width:30px;height:26px;padding:0 4px;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;background:var(--surface2);color:var(--faint)}
+.summary .val{font-size:.85rem;font-weight:600;color:var(--body)}
+.summary .reset{margin-left:auto;appearance:none;font-size:.75rem;font-weight:700;border:2px solid var(--line);background:var(--surface);color:var(--body);padding:5px 12px;border-radius:8px;cursor:pointer}
+
+/* list items (toc style) */
+.toc-list{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:10px}
+.toc-list li{margin:0}
+.toc-item{display:grid;grid-template-columns:40px 110px 1fr;gap:12px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:14px 16px}
+.toc-item.two{grid-template-columns:40px 1fr}
+.toc-item .n{width:36px;height:36px;border-radius:999px;display:grid;place-items:center;font-weight:700;font-size:.85rem;background:var(--pri-50);color:var(--pri)}
+.toc-item .w{font-weight:700;font-size:.8rem;color:var(--pri);padding-top:7px}
+.toc-item .c b{display:block;font-size:.95rem;font-weight:700;color:var(--ink2);margin-bottom:2px}
+.toc-item .c p{margin:0;color:var(--muted);font-size:.85rem}
+.toc-item.warn{background:var(--warn-bg);border-color:var(--warn-line)}
+.toc-item.warn .n{background:var(--warn-line);color:var(--warn)}
+@media (max-width:640px){.toc-item{grid-template-columns:36px 1fr;gap:4px 12px}.toc-item .c{grid-column:1 / -1}}
+
+/* option cards */
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin-bottom:16px}
+.tm{border:1px solid var(--line);border-left:4px solid var(--faint);border-radius:16px;background:var(--surface);box-shadow:var(--shadow);padding:16px}
+.tm.rec{border-left-color:var(--pri);background:var(--pri-50);border-color:var(--pri-200)}
+.tm h4{margin:0 0 6px;font-size:1rem;display:flex;gap:8px;align-items:center;justify-content:space-between}
+.tag{font-size:.7rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--pri);color:#fff}
+.tm dl{margin:0;font-size:.85rem}
+.tm dt{color:var(--muted);font-size:.75rem;font-weight:600;margin-top:8px}
+.tm dd{margin:0;color:var(--body)}
+.tm ul{margin:2px 0 0;font-size:.85rem}
+.pro li::marker{content:"+  ";color:var(--ok);font-weight:700}
+.con li::marker{content:"–  ";color:var(--E);font-weight:700}
+
+/* timeline */
+.bar{display:flex;min-height:44px;border-radius:999px;overflow:hidden;margin:6px 0 4px;gap:2px;background:var(--line)}
+.bar button{appearance:none;border:0;display:flex;flex-direction:column;justify-content:center;padding:4px 12px;font-size:.72rem;font-weight:700;color:var(--kc);background:var(--ks);text-align:left;cursor:pointer;line-height:1.2;min-width:0;overflow:hidden}
+.bar button span{font-weight:500;opacity:.85}
+.bar button[aria-pressed="true"]{background:var(--kc);color:#fff}
+.ticks{position:relative;height:28px;margin-bottom:12px}
+.ticks i{position:absolute;top:0;transform:translateX(-50%);font-style:normal;font-size:.68rem;font-weight:600;color:var(--pri);display:flex;flex-direction:column;align-items:center}
+.ticks i::before{content:"";width:2px;height:8px;background:var(--pri);margin-bottom:1px;border-radius:2px}
+@media (max-width:760px){.bar{flex-direction:column;border-radius:12px}.bar button{flex:none!important;padding:8px 12px;font-size:.8rem}.ticks{display:none}}
+.pillv{display:inline-block;min-width:28px;text-align:center;padding:1px 8px;border-radius:999px;background:var(--pri);color:#fff;font-weight:700}
+.dash{color:var(--faint)}
+
+.lang{display:inline-flex;border:2px solid var(--pri-200);border-radius:8px;overflow:hidden;background:var(--surface)}
+.lang button{appearance:none;border:0;background:transparent;color:var(--pri-d);font-size:.75rem;font-weight:700;padding:4px 10px;cursor:pointer}
+.lang button+button{border-left:2px solid var(--pri-200)}
+.lang button[aria-pressed="true"]{background:var(--pri);color:#fff}
+@media (max-width:640px){.lang button{padding:3px 8px;font-size:.7rem}}
+table.opt th.rec,table.opt td.rec{background:var(--pri-50)}
+table.opt th.rec{color:var(--pri-d)}
+table.opt tbody th{white-space:normal;background:var(--surface2)}
+table.opt{table-layout:fixed}
+table.opt td ul{margin:0;font-size:.85rem}
+table.std{table-layout:fixed;min-width:980px}
+table.std th:first-child,table.std td:first-child{position:sticky;left:0;z-index:1;background:var(--surface);width:160px;box-shadow:1px 0 0 var(--line)}
+table.std thead th:first-child{background:var(--surface2)}
+table.std th.tgt{background:var(--pri-100);color:var(--pri-d)}
+table.std td.tgt{background:var(--pri-50)}
+table.std td:first-child b{display:block;color:var(--kc)}
+table.std th small{display:block;font-weight:600;color:var(--pri)}
+@media (max-width:640px){table.std th:first-child,table.std td:first-child{width:130px}}
+.ladder li{padding:12px 14px;font-size:.85rem;color:var(--body)}
+.ladder li b{display:block;font-size:.75rem;margin-bottom:4px;color:var(--ink2)}
+.ladder li[data-l="3"] b{color:var(--l3ink)}
+.tabs.dgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));overflow:visible}
+.tabs.dgrid button{white-space:normal;text-align:left;align-items:flex-start;line-height:1.35}
+.tabs.dgrid button .kn{margin-top:1px}
+@media (max-width:640px){.tabs.dgrid{gap:4px}.tabs.dgrid button{flex-direction:column;gap:4px;padding:6px 8px;font-size:.72rem}}
+
+:root{--t0:#eef2ff;--t1:#e0e7ff;--t2:#c7d2fe;--t3:#818cf8;--t4:#4f46e5}
+.ladder.t5{grid-template-columns:repeat(5,1fr)}
+.ladder li[data-t="0"]{background:var(--t0)}.ladder li[data-t="1"]{background:var(--t1)}.ladder li[data-t="2"]{background:var(--t2)}
+.ladder li[data-t="3"]{background:var(--t3);color:#fff}.ladder li[data-t="4"]{background:var(--t4);color:#fff}
+.ladder li[data-t="3"] b,.ladder li[data-t="4"] b,.ladder li[data-t="3"] .gr,.ladder li[data-t="4"] .gr{color:#fff}
+.ladder .gr{display:block;width:fit-content;font-size:.7rem;font-weight:700;color:var(--pri);margin-bottom:4px}
+.ladder li[data-t="3"] .gr,.ladder li[data-t="4"] .gr{background:rgba(255,255,255,.2);padding:0 6px;border-radius:6px}
+@media (max-width:760px){.ladder.t5{grid-template-columns:1fr}}
+.fig3d{margin:0;overflow-x:auto}
+.fig3d svg{display:block;width:100%;max-width:760px;min-width:480px;height:auto;margin:0 auto;font-family:var(--sans)}
+.ladder li[data-l="3"]{color:var(--l3ink)}
+
+.stages{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:8px 0 14px}
+.stage{appearance:none;text-align:left;border:2px solid var(--line);border-top:5px solid var(--kc);border-radius:12px;background:var(--surface);padding:10px;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:0;font:inherit;color:inherit}
+.stage:hover{border-color:var(--kc);border-top-width:5px}
+.stage .sn{font-size:.7rem;font-weight:700;color:var(--kc)}
+.stage .st{font-size:.85rem;font-weight:700;color:var(--ink2);line-height:1.3;overflow-wrap:anywhere}
+.stage .sw{font-size:.75rem;font-weight:600;color:var(--muted)}
+.stage[aria-pressed="true"]{background:var(--ks);border-color:var(--kc);box-shadow:var(--shadow2)}
+@media (max-width:1100px){.stages{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media (max-width:640px){.stages{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tlwrap{position:relative;margin:2px 0 4px;padding:4px 0}
+.tl{display:flex;height:12px;border-radius:999px;overflow:hidden;gap:2px;background:var(--line)}
+.tl span{background:var(--ks)}
+.tl span.on{background:var(--kc)}
+.tlwrap .dot{position:absolute;top:0;width:3px;height:20px;border-radius:2px;background:var(--pri);transform:translateX(-50%)}
+.tlaxis{display:flex;justify-content:space-between;font-size:.72rem;font-weight:600;color:var(--faint)}
+.s-head{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap}
+.hbtn{flex:none;margin-left:auto;display:inline-flex;align-items:center;gap:6px;padding:7px 14px;font-size:.8rem;font-weight:700;border-radius:8px;border:2px solid var(--pri-200);background:var(--pri-50);color:var(--pri-d);text-decoration:none;white-space:nowrap}
+.hbtn:hover{background:var(--pri);border-color:var(--pri);color:#fff}
+
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin:0 0 20px}
+.stat div{border:1px solid var(--line);border-left:4px solid var(--kc);border-radius:12px;padding:12px 14px;background:var(--surface)}
+.stat b{display:block;font-size:1.5rem;font-weight:800;line-height:1.2;color:var(--kc)}
+.stat span{display:block;font-size:.8rem;color:var(--body);margin-top:2px}
+.stat .kn{margin-bottom:8px}
+.stat em{display:block;font-style:normal;font-size:.78rem;color:var(--body);margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.docs{display:flex;flex-wrap:wrap;gap:6px}
+.doc{display:inline-flex;align-items:center;padding:6px 10px;font-size:.75rem;font-weight:700;border-radius:8px;border:2px solid var(--pri-200);background:var(--pri-50);color:var(--pri-d);text-decoration:none;white-space:nowrap}
+.doc:hover{background:var(--pri);border-color:var(--pri);color:#fff}
+@media (max-width:640px){.doc{padding:5px 8px;font-size:.7rem}.docs{gap:4px;flex-basis:100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}}
+table.soltbl{min-width:980px}
+table.soltbl tbody th{border-left:4px solid var(--kc)!important}
+table.soltbl tbody th b{display:block;margin-top:6px;color:var(--kc);font-size:.9rem;line-height:1.35}
+table.soltbl td.tgt{background:var(--ks)}
+.stat small{display:block;font-size:.72rem;color:var(--faint);margin-top:4px}
+table.opt{min-width:760px}
+table.opt th .kn{margin-top:4px}
+.sol{margin-top:6px;display:flex;flex-wrap:wrap;gap:4px}
+table.tlt td.k{white-space:normal;color:var(--pri-d)}
+table.tlt tr.ms>td{background:var(--pri-50)}
+table.tlt tr.ms td:nth-child(2){font-weight:600;color:var(--pri-ink)}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div class="sticky">
+    <header class="top">
+      <div><h1></h1></div>
+      <div class="top-r"><nav class="docs" id="docs" aria-label="Documents"></nav><span class="count" id="count"></span><span class="lang" role="group" aria-label="Language"><button data-lang="en">EN</button><button data-lang="vi">VN</button></span></div>
+    </header>
+    <div class="progress" aria-hidden="true"><div id="prog"></div></div>
+    <nav class="pills" role="tablist" aria-label="Sections">
+      <button class="pill" role="tab" id="t-ov" aria-controls="p-ov"></button>
+      <button class="pill" role="tab" id="t-sol" aria-controls="p-sol"></button>
+      <button class="pill" role="tab" id="t-cmp" aria-controls="p-cmp"></button>
+      <button class="pill" role="tab" id="t-tl" aria-controls="p-tl"></button>
+    </nav>
+  </div>
+  <main class="card">
+    <section role="tabpanel" id="p-ov" aria-labelledby="t-ov"></section>
+    <section role="tabpanel" id="p-sol" aria-labelledby="t-sol" hidden></section>
+    <section role="tabpanel" id="p-cmp" aria-labelledby="t-cmp" hidden></section>
+    <section role="tabpanel" id="p-tl" aria-labelledby="t-tl" hidden></section>
+  </main>
+  <footer class="foot" id="foot"></footer>
+</div>
+<script>
+let lang='vi';
+const VI=()=>lang==='vi';
+const T=(en,vi)=>VI()?vi:en;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const L=p=>esc(Array.isArray(p)?(VI()?p[1]:p[0]):p);
+
+const DOCS=[
+ {t:['AY24-25 report','Báo cáo NH 24-25'],u:'https://dinhthienly.sharepoint.com/:w:/r/sites/repository/Shared%20Documents/General/CIEC/2025-2026/1.%20Work%20Items/07.%20Program%20Evaluation/5.%20Others/CIEC%2024%200925%20SR%20training%20for%20teachers%20AY24-25/3.%20Report/CIEC%2026%200508%20Report%20on%20SR%20training%20for%20teachers%20AY%2024-25.docx?d=w68e2c4afdc5c4efe86ed54f8dc82cb2e&csf=1&web=1&e=BRdxpL'},
+ {t:['AY25-26 report','Báo cáo NH 25-26'],u:'https://dinhthienly.sharepoint.com/:w:/r/sites/repository/Shared%20Documents/General/CIEC/2025-2026/1.%20Work%20Items/07.%20Program%20Evaluation/5.%20Others/CIEC%2025%200911%20SR%20training%20for%20teachers%20AY25-26/3.%20Report/CIEC%2026%200508%20Report%20on%20SR%20training%20for%20teachers%20AY%2025-26.docx?d=w380b170a0f2c489fa9234d845fecf27b&csf=1&web=1&e=SrEFQx'},
+ {t:['AY26-27 plan','Kế hoạch NH 26-27'],u:'https://dinhthienly.sharepoint.com/:w:/r/sites/repository/Shared%20Documents/General/CIEC/2026-2027/1.%20Work%20Items/14.%20Research%20Capacity%20Building/1.%20SR%20training%20for%20teachers%20AY26-27/2.%20Plan%20-%20Finance/CIEC%2026%200806%20Plan%20for%20organizing%20SR%20mini%20workshops%20AY26-27.docx?d=w97d9d3e271a846e4902249fe98176a0f&csf=1&web=1&e=A1NJWC'}];
+const UI={title:['SR mini workshop plan proposal, AY 2026-2027','Đề xuất kế hoạch tập huấn NCKH mini, NH 2026-2027'],
+ section:['Section','Phần'],foot:'LSTS · CIEC · AY26-27',
+ tabs:{ov:['Overview','Tổng quan'],sol:['Solutions','Giải pháp'],cmp:['What changes','Điểm thay đổi'],tl:['Timeline','Lộ trình']}};
+
+const STATS=[
+ {n:1,v:'~25%',l:['of registered teachers actually attended the AY25-26 SR mini workshop series; most absences were unannounced.','giáo viên đã đăng ký thực sự tham dự chuỗi SR mini workshop NH 2025-2026; phần lớn vắng không báo trước.'],x:['6.67% of respondents asked for recorded sessions.','6,67% giáo viên phản hồi đề nghị có bản ghi buổi học.'],src:['AY25-26 report, 3.1','Báo cáo NH 2025-2026, mục 3.1']},
+ {n:2,v:'21.9% · 17%',l:['asked for more time and slower pacing in the Data Analysis and the Subject-Specific Research workshops.','đề nghị thêm thời gian, giảm tốc độ ở workshop Phân tích dữ liệu và workshop NCKH theo bộ môn.'],x:['13.33% reported cognitive overload in the mini workshop series.','13,33% phản ánh quá tải nội dung ở chuỗi mini workshop.'],src:['AY25-26 report, 3.1–3.3','Báo cáo NH 2025-2026, mục 3.1–3.3']},
+ {n:3,v:'34%',l:['want to learn more about research implementation and methodology after the Subject-Specific Research workshop.','muốn tìm hiểu thêm về triển khai và phương pháp nghiên cứu sau workshop NCKH theo bộ môn.'],x:['Expert review: the 9 proposals still need sharper research questions, design and sampling.','Góp ý chuyên gia: 9 đề cương cần làm rõ câu hỏi, thiết kế và mẫu nghiên cứu.'],src:['AY25-26 report, 3.3','Báo cáo NH 2025-2026, mục 3.3']},
+ {n:4,v:'10.6%',l:['asked for subject-specific examples to apply research in their own discipline.','đề nghị bổ sung ví dụ theo bộ môn để vận dụng vào chuyên môn của mình.'],x:['7.4% named professional exchange with colleagues as the most valuable aspect of the workshop.','7,4% chọn trao đổi chuyên môn với đồng nghiệp là điều giá trị nhất của workshop.'],src:['AY25-26 report, 3.3','Báo cáo NH 2025-2026, mục 3.3']},
+ {n:5,v:'9',l:['subject-specific research proposals developed, with no formal channel yet to share results.','đề cương nghiên cứu theo bộ môn đã được xây dựng, chưa có kênh chính thức để lan tỏa kết quả.'],x:['A school-based SR conference is suggestion #3 of the report.','Hội thảo NCKH cấp trường là đề xuất số 3 của báo cáo.'],src:['AY25-26 report, 3.3 and 5','Báo cáo NH 2025-2026, mục 3.3 và 5']}];
+const PURPOSE=[
+ ['Apply SR knowledge from SR101–SR103 and previous workshops to classroom-based research on real teaching and learning challenges.','Vận dụng kiến thức NCKH từ SR101–SR103 và các buổi tập huấn trước vào nghiên cứu dựa trên thực tiễn lớp học.'],
+ ['Strengthen research capacity through collaborative learning: research clinics, peer review, individual support and a Research Community of Practice.','Nâng cao năng lực nghiên cứu qua học tập hợp tác: tọa đàm thực hành, phản biện đồng nghiệp, hỗ trợ cá nhân và Cộng đồng thực hành nghiên cứu.'],
+ ['Produce and share quality outputs: proposals, validated instruments, data analyses, posters, technical reports or conference papers.','Xây dựng và lan tỏa sản phẩm chất lượng: đề cương, công cụ đã kiểm định, báo cáo phân tích, poster, báo cáo kỹ thuật hoặc bài báo hội thảo.']];
+
+const SOL=[
+ {d:'A',n:1,t:['Two recognized ways to participate','Hai hình thức tham gia được công nhận'],
+  how:['Attend in person on Friday, or watch the recording/recap video on Canvas and submit a short task linked to your own project within 7 days. Both count as participation.','Dự trực tiếp vào thứ Sáu, hoặc xem bản ghi/video tóm tắt trên Canvas và nộp nhiệm vụ ngắn gắn với dự án của mình trong vòng 7 ngày. Cả hai đều được tính là đã tham gia.'],
+  fix:['Teachers with heavy workloads or unplanned duties no longer lose the session.','Giáo viên bận việc hoặc có công tác đột xuất không bị mất buổi.'],
+  ev:['About 25% attendance in AY25-26; teachers asked for recorded sessions.','Tỷ lệ tham dự khoảng 25% NH 2025-2026; giáo viên đề nghị có bản ghi buổi học.'],
+  risk:['The task is tied to the teacher\'s own project (e.g., revise your research question), not a quiz, so watching alone is not enough.','Nhiệm vụ gắn với dự án của chính giáo viên (ví dụ chỉnh lại câu hỏi nghiên cứu), không phải trắc nghiệm, để tránh xem cho có.']},
+ {d:'C',n:2,t:['Shorter, focused sessions','Buổi học ngắn, tập trung'],
+  how:['Period 8: a 45-minute session on one specific problem, plus a recap video of about 10 minutes on Canvas. Period 9: optional consultation and practice.','Tiết 8: buổi 45 phút giải quyết một vấn đề cụ thể, kèm video tóm tắt khoảng 10 phút trên Canvas. Tiết 9: tư vấn và thực hành tùy chọn.'],
+  fix:['Easier to fit into a busy week, with less content per session.','Dễ xếp vào lịch bận, giảm khối lượng nội dung mỗi buổi.'],
+  ev:['Overload and requests for more time were reported in both years.','Quá tải nội dung và đề nghị thêm thời gian được ghi nhận ở cả hai năm.'],
+  risk:['Topics that need more depth are split across sessions instead of compressed.','Chủ đề cần đào sâu được chia thành nhiều buổi thay vì dồn vào một buổi.']},
+ {d:'B',n:3,t:['Individual support without meeting in person','Hỗ trợ cá nhân không cần gặp trực tiếp'],
+  how:['15-minute Teams consultations booked in advance, feedback written directly on proposal or report files, and a shared Q&A channel. CIEC replies within 2 working days.','Tư vấn 15 phút qua Teams theo lịch đặt trước, góp ý trực tiếp trên file đề cương hoặc báo cáo, và kênh hỏi đáp chung. CIEC phản hồi trong vòng 2 ngày làm việc.'],
+  fix:['Teachers get help when they need it, without waiting for a group schedule.','Giáo viên được hỗ trợ đúng lúc cần, không phụ thuộc lịch chung.'],
+  ev:['Individual guidance was suggestion #1 in the AY25-26 report; the 9 proposals still need refinement.','Hướng dẫn cá nhân là đề xuất số 1 của báo cáo NH 2025-2026; 9 đề cương cần tiếp tục chỉnh sửa.'],
+  risk:['Response time is tracked so the channel stays reliable.','Thời gian phản hồi được theo dõi để kênh hỗ trợ luôn đáng tin cậy.']},
+ {d:'D',n:4,t:['Research Community of Practice','Cộng đồng thực hành nghiên cứu'],
+  how:['Meetings every two months from December 2026. Teachers, grouped by subject cluster, share research progress and give peer review on proposals, instruments and results. Teachers lead the sharing; CIEC facilitates.','Sinh hoạt 2 tháng/lần từ tháng 12/2026. Giáo viên theo cụm bộ môn chia sẻ tiến độ nghiên cứu, phản biện đồng nghiệp về đề cương, công cụ và kết quả. Giáo viên là người chia sẻ; CIEC điều phối.'],
+  fix:['Teachers learn from colleagues in their own discipline and keep each other on track.','Giáo viên học hỏi đồng nghiệp cùng chuyên môn và cùng nhau duy trì tiến độ.'],
+  ev:['Teachers asked for subject-specific examples and for colleagues to share their research; idea sharing was valued in AY25-26.','Giáo viên đề nghị ví dụ theo bộ môn và mời đồng nghiệp chia sẻ đề tài; việc trao đổi ý tưởng được đánh giá cao NH 2025-2026.'],
+  risk:['Short, outcome-focused meetings; notes and slides posted on Canvas for those who miss them.','Buổi sinh hoạt ngắn, tập trung vào kết quả; biên bản và slide đăng trên Canvas cho người vắng.']},
+ {d:'E',n:5,t:['School-based SR conference','Hội thảo NCKH cấp trường'],
+  how:['Held in May 2027. Teachers present posters or short reports on their research, at whatever stage they have reached. News is posted on the school website.','Tổ chức vào tháng 5/2027. Giáo viên trình bày poster hoặc báo cáo ngắn về nghiên cứu của mình, ở giai đoạn đã đạt được. Tin bài đăng trên website trường.'],
+  fix:['Gives teachers a clear goal and recognition, and spreads results across the school.','Tạo mục tiêu rõ ràng và sự ghi nhận cho giáo viên, lan tỏa kết quả trong toàn trường.'],
+  ev:['Suggestion #3 of the AY25-26 report; teachers asked to hear about research colleagues had carried out.','Đề xuất số 3 của báo cáo NH 2025-2026; giáo viên mong được nghe chia sẻ các đề tài đồng nghiệp đã thực hiện.'],
+  risk:['Presentation formats are announced early so teachers at different stages can take part.','Hình thức trình bày được công bố sớm để giáo viên ở các giai đoạn khác nhau đều tham gia được.']}];
+
+const TL=[
+ {w:'19–30/10/2026',a:['Submit the plan to BOP for approval.','Trình kế hoạch lên LĐNT phê duyệt.'],h:'CIEC'},
+ {w:'2–6/11/2026',a:['Needs survey and registration: topics of interest, current research stage, subject group, preferred time slot and participation mode.','Khảo sát nhu cầu và đăng ký tham gia: chủ đề quan tâm, giai đoạn nghiên cứu hiện tại, tổ bộ môn, khung giờ và hình thức tham gia mong muốn.'],h:'CIEC, PD',
+  n:['Link: CIEC 2026 0806 Registration for SR mini workshops in AY26-27',['Topic selection principles: relevance to current research stages, ability to address practical challenges, teachers\' interest levels, and the school\'s strategic orientation.','Nguyên tắc lựa chọn chủ đề: mức độ phù hợp với giai đoạn nghiên cứu, khả năng giải quyết khó khăn thực tế, mức độ quan tâm của giáo viên và định hướng chiến lược của nhà trường.']]},
+ {w:'9–30/11/2026',a:['Develop the training framework and content based on the survey results; confirm registration, compile the list of participating teachers and define teachers\' goals for the end of the program.','Xây dựng khung chương trình và nội dung tập huấn dựa trên kết quả khảo sát; xác nhận đăng ký tham gia, lập danh sách giáo viên tham dự tập huấn và xác định mục tiêu của giáo viên sau chương trình tập huấn.'],h:'CIEC',
+  n:[['Detailed schedule published by 16/11/2026.','Lịch chi tiết công bố trước 16/11/2026.']]},
+ {w:'12/2026–5/2027',a:['Organize SR mini workshops on Fridays: period 8 is a 45-minute session focused on one specific problem; period 9 is optional consultation and practice time.','Tổ chức các buổi SR mini workshop vào thứ Sáu: tiết 8 là buổi tập huấn 45 phút tập trung vào một vấn đề cụ thể; tiết 9 là thời gian tư vấn và thực hành tùy chọn.'],h:'CIEC',s:[1,2],
+  n:[['Two recognized ways to participate: (1) attend in person; (2) watch the recording/recap video (about 10 minutes) on Canvas and submit a short project-linked task within 7 days.','Hai cách tham gia được công nhận: (1) dự trực tiếp; (2) xem bản ghi/video tóm tắt (khoảng 10 phút) trên Canvas và nộp nhiệm vụ ngắn gắn với dự án của mình trong vòng 7 ngày.'],
+     ['Pre-work posted one week ahead; recordings posted within 3 days; participants update research progress trackers before each session; reminders 3 days and 1 day before; no sessions during semester exams or the Lunar New Year break.','Tài liệu chuẩn bị đăng trước 1 tuần; bản ghi đăng trong vòng 3 ngày; giáo viên cập nhật bảng theo dõi tiến độ nghiên cứu trước mỗi buổi; nhắc lịch trước 3 ngày và 1 ngày; không tổ chức trong thời gian kiểm tra học kỳ và nghỉ Tết Nguyên đán.']]},
+ {w:'12/2026–5/2027',a:['Online individual support: 15-minute Teams consultations booked in advance; feedback directly on proposal/report files; Q&A on the shared Teams channel.','Hỗ trợ cá nhân trực tuyến: tư vấn 15 phút qua Teams theo lịch đặt trước; góp ý trực tiếp trên file đề cương/báo cáo; hỏi đáp trên kênh Teams chung.'],h:'CIEC',s:[3],
+  n:[['Response within 2 working days.','Phản hồi trong vòng 2 ngày làm việc.']]},
+ {w:['12/2026–5/2027 (bimonthly)','12/2026–5/2027 (2 tháng/lần)'],a:['Research Community of Practice meetings: teacher-led progress sharing and peer review.','Sinh hoạt Cộng đồng thực hành nghiên cứu: giáo viên chia sẻ tiến độ, phản biện đồng nghiệp.'],h:'CIEC',s:[4],
+  n:[{d:['End of 12/2026','Cuối 12/2026'],t:['Proposals and data collection instruments finalized.','Hoàn thiện đề cương và công cụ thu thập dữ liệu.']},
+     {d:['End of 1/2027','Cuối 1/2027'],t:['Instruments validated and data collection started.','Hoàn thành kiểm định công cụ và bắt đầu thu thập dữ liệu.']},
+     {d:['End of 2, 3 and 4/2027','Cuối 2, 3, 4/2027'],t:['Progress updates and adjustments to the implementation plan (if any).','Cập nhật tiến độ và điều chỉnh phương án thực hiện (nếu có).']},
+     {d:['End of 5/2027','Cuối 5/2027'],t:['Data analysis completed and preparation for the paper.','Hoàn thành phân tích dữ liệu và chuẩn bị cho bài báo.']}]},
+ {w:'5/2027',a:['School-based SR conference: teachers present posters/reports; end-of-year survey.','Hội thảo NCKH cấp trường: giáo viên trình bày poster/báo cáo; khảo sát cuối năm.'],h:'CIEC, AM, PD',s:[5]},
+ {w:'6/2027',a:['Report outcomes to BOP.','Báo cáo kết quả lên LĐNT.'],h:'CIEC'}];
+
+const CMP=[
+ [['Participation mode','Hình thức tham gia'],['In person only; non-binding registration.','Chỉ trực tiếp; đăng ký không ràng buộc.'],['In person or Canvas recording plus task within 7 days; confirmed commitment and reminders.','Trực tiếp hoặc bản ghi Canvas kèm nhiệm vụ trong 7 ngày; cam kết và nhắc lịch.'],['About 25% attendance; heavy workloads and unplanned duties.','Tỷ lệ tham dự khoảng 25%; khối lượng công việc lớn, công tác đột xuất.'],1],
+ [['Session design','Thiết kế buổi học'],['90-minute sessions with broad content.','Buổi 90 phút với nhiều nội dung.'],['45-minute focused session plus recap video; optional practice in period 9.','Buổi 45 phút tập trung kèm video tóm tắt; tiết 9 thực hành tùy chọn.'],['More time was the top request in both years.','Thêm thời gian là đề nghị phổ biến nhất ở cả hai năm.'],2],
+ [['Individual support','Hỗ trợ cá nhân'],['Not in place.','Chưa có.'],['15-minute Teams consultations; feedback on files; Q&A channel.','Tư vấn 15 phút qua Teams; góp ý trên file; kênh hỏi đáp.'],['Teachers need individual guidance; the 9 proposals still need refinement.','Giáo viên cần hướng dẫn cá nhân; 9 đề cương cần tiếp tục chỉnh sửa.'],3],
+ [['Subject-specific application','Ứng dụng theo bộ môn'],['One subject-specific workshop.','Một workshop chuyên đề.'],['Research Community of Practice grouped by subject cluster, every two months.','Cộng đồng thực hành nghiên cứu theo cụm bộ môn, 2 tháng/lần.'],['Requested in both years; needs differ between clusters.','Được đề nghị ở cả hai năm; nhu cầu khác nhau giữa các cụm.'],4],
+ [['Dissemination','Lan tỏa sản phẩm'],['No formal channel.','Chưa có kênh chính thức.'],['School-based SR conference in 5/2027.','Hội thảo NCKH cấp trường 5/2027.'],['Suggestion #3; builds research culture.','Đề xuất số 3; xây dựng văn hóa nghiên cứu.'],5],
+ [['Evaluation','Đánh giá'],['Satisfaction surveys only.','Chỉ khảo sát hài lòng.'],['Reach, task completion, research progress and outputs; mid-term review in 1/2027.','Độ phủ, mức hoàn thành, tiến độ nghiên cứu và sản phẩm; đánh giá giữa kỳ 1/2027.'],['Outcomes, not only perceptions, need measuring.','Cần đo kết quả thực tế, không chỉ cảm nhận.'],0]];
+
+/* ---------- render ---------- */
+const head=(meta,h2)=>`<div class="s-head"><div><span class="meta">${meta}</span><h2>${h2}</h2></div></div>`;
+const solChip=n=>{const s=SOL.find(x=>x.n===n);return `<span class="kn" data-d="${s.d}" style="white-space:normal">${T('Solution','Giải pháp')} ${n}: ${L(s.t)}</span>`};
+
+function renderOv(){
+ $('#p-ov').innerHTML=head(T('Proposal for BOP approval','Đề xuất trình LĐNT phê duyệt'),T('SR mini workshops for teachers, AY 2026-2027','Tập huấn NCKH mini cho giáo viên, NH 2026-2027'))+
+ `<h3>${T('What the previous reports show','Báo cáo các năm trước cho thấy')}</h3>
+ <div class="stat">${STATS.map(x=>{const so=SOL.find(y=>y.n===x.n);return `<div data-d="${so.d}"><b>${VI()?x.v.replace(/\./g,','):x.v}</b><span>${L(x.l)}</span><em>${L(x.x)}</em></div>`}).join('')}</div>
+ <div class="notebox">${T('Constraint for AY 2026-2027: teachers carry heavy workloads and unplanned duties during the year, so few can attend every session in person.','Ràng buộc NH 2026-2027: giáo viên có khối lượng công việc lớn và công tác đột xuất trong năm, nên ít người dự được trọn vẹn tất cả các buổi trực tiếp.')}</div>
+ <div class="goal"><p><b>${T('Main idea:','Ý tưởng chính:')}</b> ${T('move from topic-based workshops that teachers must attend in person to needs-based support that reaches teachers where they are, so that more of them can keep their own research projects moving despite heavy workloads.','chuyển từ các buổi tập huấn theo chủ đề bắt buộc có mặt trực tiếp sang hỗ trợ theo nhu cầu, đến với giáo viên ở nơi họ đang làm việc, để nhiều giáo viên hơn duy trì được dự án nghiên cứu của mình dù khối lượng công việc lớn.')}</p></div>
+ <h3>${T('Purposes','Mục đích')}</h3><ol>${PURPOSE.map(p=>`<li>${L(p)}</li>`).join('')}</ol>
+ <h3>${T('Participants','Đối tượng tham dự')}</h3>
+ <p>${T('Teachers and staff conducting or planning SR projects in AY 2026-2027, with priority for the authors of the nine AY 2025-2026 proposals. Registration is a commitment to participate, in person or on Canvas.','Giáo viên và nhân viên đang thực hiện hoặc dự kiến thực hiện dự án NCKH trong NH 2026-2027, ưu tiên tác giả của 9 đề cương NH 2025-2026. Đăng ký đồng nghĩa với cam kết tham gia, trực tiếp hoặc trên Canvas.')}</p>`;}
+
+function renderSol(){
+ $('#p-sol').innerHTML=head(T('Five solutions to reach more teachers','Năm giải pháp để tiếp cận nhiều giáo viên hơn'),T('Bring the training to teachers','Đưa tập huấn đến với giáo viên'))+
+ `<div class="tbl"><table class="opt soltbl"><colgroup><col style="width:17%"><col style="width:27%"><col style="width:17%"><col style="width:20%"><col style="width:19%"></colgroup>
+ <thead><tr><th>${T('Solution','Giải pháp')}</th><th>${T('How it works','Cách làm')}</th><th>${T('What it solves','Giải quyết vấn đề')}</th><th>${T('Evidence','Căn cứ')}</th><th>${T('Safeguard','Lưu ý')}</th></tr></thead><tbody>
+ ${SOL.map(s=>`<tr data-d="${s.d}"><th scope="row"><span class="kn" data-d="${s.d}">${T('Solution','Giải pháp')} ${s.n}</span><b>${L(s.t)}</b></th><td>${L(s.how)}</td><td>${L(s.fix)}</td><td>${L(s.ev)}</td><td class="tgt">${L(s.risk)}</td></tr>`).join('')}
+ </tbody></table></div>`;}
+
+function renderCmp(){
+ $('#p-cmp').innerHTML=head(T('AY 2025-2026 compared with AY 2026-2027','So sánh NH 2025-2026 và NH 2026-2027'),T('What changes and why','Thay đổi gì và vì sao'))+
+ `<div class="tbl"><table class="opt"><colgroup><col style="width:20%"><col style="width:22%"><col style="width:30%"><col style="width:28%"></colgroup>
+ <thead><tr><th>${T('Area','Nội dung')}</th><th>2025-2026</th><th class="rec">2026-2027</th><th>${T('Reason','Lý do')}</th></tr></thead><tbody>
+ ${CMP.map(r=>`<tr><th scope="row">${L(r[0])}${r[4]?`<br>${solChip(r[4])}`:''}</th><td>${L(r[1])}</td><td class="rec">${L(r[2])}</td><td>${L(r[3])}</td></tr>`).join('')}
+ </tbody></table></div>`;}
+
+function renderTl(){
+ $('#p-tl').innerHTML=head(T('October 2026 to June 2027','10/2026 đến 6/2027'),T('Implementation summary','Tóm tắt triển khai'))+
+ `<div class="tbl"><table class="opt tlt"><colgroup><col style="width:16%"><col style="width:40%"><col style="width:12%"><col style="width:32%"></colgroup>
+ <thead><tr><th>${T('Date','Ngày')}</th><th>${T('Activity','Hoạt động')}</th><th>${T('Host','Phòng ban phụ trách')}</th><th>${T('Note','Ghi chú')}</th></tr></thead><tbody>
+ ${TL.map(x=>`<tr class="${x.ms?'ms':''}"><td class="k">${L(x.w)}</td><td>${L(x.a)}${x.s?`<div class="sol">${x.s.map(solChip).join('')}</div>`:''}</td><td>${L(x.h)}</td><td>${(x.n||[]).map(v=>`<p style="margin:0 0 6px;font-size:inherit">${v.d?`<b style="color:var(--pri-d)">${L(v.d)}:</b> ${L(v.t)}`:L(v)}</p>`).join('')}</td></tr>`).join('')}
+ </tbody></table></div>`;}
+
+/* ---------- shell ---------- */
+const IDS=['ov','sol','cmp','tl'];
+const tabs=[...document.querySelectorAll('[role=tab].pill')];
+let curTab=null;
+function openTab(id,focus){curTab=id;const pid='p-'+id;tabs.forEach((t,i)=>{const on=t.getAttribute('aria-controls')===pid;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;const p=document.getElementById(t.getAttribute('aria-controls'));p.hidden=!on;if(on){p.classList.remove('fade-in');void p.offsetWidth;p.classList.add('fade-in');$('#count').textContent=`${T(...UI.section)} ${i+1} / ${tabs.length}`;$('#prog').style.width=((i+1)/tabs.length*100)+'%';if(focus)t.focus()}});try{if(location.hash!=='#'+id)history.replaceState(null,'','#'+id)}catch(e){}}
+tabs.forEach((t,i)=>{t.onclick=()=>{openTab(t.getAttribute('aria-controls').slice(2));window.scrollTo({top:0})};t.onkeydown=e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){const n=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];openTab(n.getAttribute('aria-controls').slice(2),true)}}});
+function renderAll(){document.documentElement.lang=VI()?'vi':'en';
+ $('.top h1').textContent=T(...UI.title);$('#foot').textContent=UI.foot;document.title=T(...UI.title);
+ $('#docs').innerHTML=DOCS.map(d=>`<a class="doc" href="${esc(d.u)}" target="_blank" rel="noopener">${L(d.t)}</a>`).join('');
+ tabs.forEach(t=>{t.textContent=T(...UI.tabs[t.getAttribute('aria-controls').slice(2)])});
+ document.querySelectorAll('[data-lang]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===lang));
+ renderOv();renderSol();renderCmp();renderTl();
+ if(curTab)openTab(curTab);}
+document.querySelectorAll('[data-lang]').forEach(b=>b.onclick=()=>{lang=b.dataset.lang;renderAll()});
+renderAll();
+const start=(location.hash||'').slice(1);openTab(IDS.includes(start)?start:'ov');
+window.addEventListener('hashchange',()=>{const h=location.hash.slice(1);if(IDS.includes(h)&&h!==curTab){openTab(h);window.scrollTo(0,0)}});
+
+</script>
+</body>
+</html>
